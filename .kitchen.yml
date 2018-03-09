@@ -1,0 +1,22 @@
+driver:
+  name: terraform
+
+provisioner:
+  name: terraform
+
+transport:
+  name: ssh
+  password: root
+
+verifier:
+  name: terraform
+  groups:
+    - name: container
+      port: 2222
+      username: root
+
+platforms:
+  - name: ubuntu
+
+suites:
+  - name: example
